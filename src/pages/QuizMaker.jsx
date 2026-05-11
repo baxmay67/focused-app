@@ -75,7 +75,7 @@ export default function QuizMaker() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://localhost/focused-api/quiz-gen.php", {
+      const res = await axios.post("http://fwh.is/quiz-gen.php", {
         subject,
         count: numQ,
         userName: user?.name || "Student",

@@ -54,7 +54,7 @@ export default function Register() {
   const submit = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost/focused-api/register.php", form);
+      const res = await axios.post("http://fwh.is/register.php", form);
       if (res.data.success) {
         setStep(2);
         setTimeout(() => navigate("/"), 2500);
