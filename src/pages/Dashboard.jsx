@@ -5,8 +5,8 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip } fro
 import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import SubjectBar from "../components/SubjectBar";
-import { SkeletonCard, Skeleton } from "../components/UI/Skeleton";
-import Empty from "../components/UI/Empty";
+import { SkeletonCard, Skeleton } from "../components/ui/Skeleton";
+import Empty from "../components/ui/Empty";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip);
 
