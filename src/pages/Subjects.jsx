@@ -14,7 +14,7 @@ export default function Subjects() {
 
   const load = async () => {
     try {
-      const res = await axios.get(`http://fw.is/subjects.php?user_id=${user.id}`);
+      const res = await axios.get(`http://localhost/focused-api/subjects.php?user_id=${user.id}`);
       if (res.data.success) setSubjects(res.data.subjects);
     } catch {}
     setLoading(false);
@@ -26,7 +26,7 @@ export default function Subjects() {
     e.preventDefault();
     setSaving(true);
     try {
-      const res = await axios.post("http://fw.is/subjects.php", {
+      const res = await axios.post("http://localhost/focused-api/subjects.php", {
         user_id: user.id,
         name: form.name,
         score: parseInt(form.score),
@@ -44,7 +44,7 @@ export default function Subjects() {
 
   const remove = async (id) => {
     try {
-      await axios.delete("http://fw.is/subjects.php", {
+      await axios.delete("http://localhost/focused-api/subjects.php", {
         data: { id },
       });
       setSubjects(subjects.filter((s) => s.id !== id));

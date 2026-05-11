@@ -31,7 +31,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (!user?.id) { navigate("/"); return; }
-    axios.get(`http://fwh.is/scores.php?user_id=${user.id}`)
+    axios.get(`http://focused-app-api.fwh.is/scores.php?user_id=${user.id}`)
       .then((res) => { if (res.data.success) setData(res.data); })
       .catch(() => {})
       .finally(() => setLoading(false));

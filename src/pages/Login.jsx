@@ -14,7 +14,7 @@ export default function Login() {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.post("http://fwh.is/login.php", { email, password });
+      const res = await axios.post("http://focused-app-api.fwh.is/login.php", { email, password });
       if (res.data.success) {
         localStorage.setItem("user", JSON.stringify(res.data.user));
         navigate("/dashboard");

@@ -33,7 +33,7 @@ export default function Companion() {
 
     try {
       const history = newMessages.slice(1).slice(-10);
-      const res = await axios.post("http://fwh.is/companion.php", {
+      const res = await axios.post("http://focused-app-api.fwh.is/companion.php", {
         message: msg,
         history: history.slice(0, -1),
         userName: user?.name || "Student",

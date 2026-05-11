@@ -29,9 +29,9 @@ export default function AIReviewer() {
     try {
       const fd = new FormData();
       fd.append("file", file);
-      const up = await axios.post("http://fwh.is/upload-notes.php", fd);
+      const up = await axios.post("http://focused-app-api.fwh.is/upload-notes.php", fd);
       if (!up.data.success) throw new Error(up.data.message);
-      const ai = await axios.post("hhttp://fwh.is/ai-reviewer.php", {
+      const ai = await axios.post("hhttp://focused-app-api.fwh.is/ai-reviewer.php", {
         content: up.data.content,
         fileName: up.data.fileName,
       });
