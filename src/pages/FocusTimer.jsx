@@ -29,7 +29,7 @@ export default function FocusTimer() {
     
       try {
         const user = JSON.parse(localStorage.getItem("user") || "{}");
-        await axios.post("http://fwh.is/sessions.php", {
+        await axios.post("http://fw.is/sessions.php", {
           user_id: user.id,
           duration_minutes: studyMin,
           completed: 1,
